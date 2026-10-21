@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,84 +5,336 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>Dhruv Vegada | Portfolio</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <nav>
-        <h2>MyPortfolio.</h2>
-        <div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+    <h2>Dhruv<span>.</span></h2>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <section id="home" class="hero">
-        <p class="tag">WELCOME TO MY PORTFOLIO</p>
+<!-- HOME -->
+<section id="home" class="hero">
 
-        <h1>Hi, I'm <span>Dhruv Vegda</span></h1>
+    <p class="tag">WELCOME TO MY PORTFOLIO</p>
 
-        <h2>Computer Engineering Student</h2>
+    <h1>Hi, I'm <span>Dhruv Vegada</span></h1>
 
-        <p>
-            I am learning Python and Web Development.
-            I love creating websites and learning new technologies.
-        </p>
+    <h2>Computer Engineering Student</h2>
 
-        <a href="#projects" class="btn">Explore My Work</a>
-    </section>
+    <p>
+        Diploma Graduate | Software Developer Fresher |
+        Python & Web Development Enthusiast
+    </p>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Computer Engineering student interested in
-            Python, Web Development and Software Technologies.
-            My goal is to build useful and creative websites.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="cards">
-            <div class="card">Python</div>
-            <div class="card">HTML</div>
-            <div class="card">CSS</div>
-            <div class="card">Java</div>
-            <div class="card">MySQL</div>
-            <div class="card">Flask</div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="card">
-            <h3>Personal Portfolio</h3>
-            <p>A personal website built using Python, Flask, HTML and CSS.</p>
-        </div>
-        <div class="card">
-            <h3>Future Project</h3>
-            <p>More exciting projects will be added here.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Interested in working together? Get in touch!</p>
-        <a class="btn"
-           href="mailto:mr.vegda07@gmail.com">
-           Email Me
+    <div class="hero-buttons">
+        <a href="#projects" class="btn">
+            Explore My Projects
         </a>
-    </section>
 
-    <footer>
-        <p>© 2026 Dhruv Vegda | My Portfolio</p>
-    </footer>
+        <a href="{{ url_for('static', filename='resume.pdf') }}"
+           class="btn outline"
+           download>
+            Download Resume
+        </a>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am a Computer Engineering diploma graduate
+        currently pursuing BE in Computer Engineering.
+
+        I have knowledge of C, Python, Java and modern
+        web technologies.
+
+        I have completed internships in Web Development
+        and Cyber Security.
+
+        I enjoy building responsive websites and
+        developing practical software solutions.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <h3>Programming Languages</h3>
+    <div class="cards">
+        <div class="card">C</div>
+        <div class="card">C++</div>
+        <div class="card">Python</div>
+        <div class="card">Java</div>
+        <div class="card">PHP</div>
+    </div>
+
+    <h3>Web Technologies</h3>
+    <div class="cards">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Bootstrap</div>
+    </div>
+
+    <h3>Database & Tools</h3>
+    <div class="cards">
+        <div class="card">MySQL</div>
+        <div class="card">MongoDB</div>
+        <div class="card">WordPress</div>
+        <div class="card">GitHub</div>
+        <div class="card">VS Code</div>
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+    <h2>Internship Experience</h2>
+
+    <div class="experience-grid">
+
+        <div class="info-card">
+            <h3>Cyber Security Intern</h3>
+            <p class="highlight">Jyesta Corporate Entity</p>
+            <p>Aug 2026 - Oct 2026</p>
+            <p>
+                Completed theoretical and practical
+                training in Cyber Security.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Web Development Intern</h3>
+            <p class="highlight">Miracle Technolabs</p>
+            <p>Jun 2024 - Aug 2024</p>
+            <p>
+                Created and managed WordPress websites
+                and contributed to a Restaurant
+                Management System project.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Web Development Intern</h3>
+            <p class="highlight">Vaistra Technologies</p>
+            <p>Aug 2023</p>
+            <p>
+                Developed responsive pages using HTML,
+                CSS and Bootstrap for a Hotel
+                Management System.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <p class="section-intro">
+        Click on a project to explore its website.
+    </p>
+
+    <div class="project-grid">
+
+        <a href="PROJECT_1_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="project-card">
+
+            <h3>Student Result Management System</h3>
+
+            <p>
+                Python and JSON based application for
+                managing student records, marks,
+                percentages and grades.
+            </p>
+
+            <div class="tech">
+                <span>Python</span>
+                <span>JSON</span>
+            </div>
+
+            <span class="project-link">
+                View Project →
+            </span>
+        </a>
+
+        <a href="PROJECT_2_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="project-card">
+
+            <h3>Hotel Management System</h3>
+
+            <p>
+                Responsive hotel-related web pages
+                with a user-friendly interface.
+            </p>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+            </div>
+
+            <span class="project-link">
+                View Project →
+            </span>
+        </a>
+
+        <a href="PROJECT_3_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="project-card">
+
+            <h3>Multiplication Table Website</h3>
+
+            <p>
+                Interactive learning website that
+                dynamically generates multiplication
+                tables using JavaScript.
+            </p>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <span class="project-link">
+                View Project →
+            </span>
+        </a>
+
+        <a href="PROJECT_4_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="project-card">
+
+            <h3>A to Z Alphabet Learning Website</h3>
+
+            <p>
+                Interactive alphabet learning website
+                with text-to-speech functionality.
+            </p>
+
+            <div class="tech">
+                <span>JavaScript</span>
+                <span>Web Speech API</span>
+            </div>
+
+            <span class="project-link">
+                View Project →
+            </span>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="info-card">
+        <h3>Bachelor of Engineering</h3>
+        <p>Computer Engineering</p>
+        <p>LJ University, Ahmedabad</p>
+        <p class="highlight">Currently Pursuing</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Diploma in Computer Engineering</h3>
+        <p>Government Polytechnic, Porbandar</p>
+        <p class="highlight">Completed: 2026</p>
+    </div>
+
+    <div class="info-card">
+        <h3>SSC (10th Standard)</h3>
+        <p>Sandipani Gurukul, Porbandar</p>
+        <p class="highlight">Completed: 2022</p>
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <div class="info-card">
+        <p>Cyber Security Training - Jyesta Corporate Entity</p>
+        <p>Cyber Security Professional - Unified Mentor</p>
+        <p>Python Programming Professional - Unified Mentor</p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        Interested in collaborating or discussing
+        software development opportunities?
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="mailto:mr.vegda07@gmail.com"
+           class="btn">
+            Email Me
+        </a>
+
+        <a href="https://github.com/VegdaDhruv07"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn outline">
+            GitHub
+        </a>
+
+        <a href="YOUR_LINKEDIN_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn outline">
+            LinkedIn
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dhruv Vegada. All Rights Reserved.</p>
+    <p>Built with Python, Flask, HTML & CSS.</p>
+</footer>
 
 </body>
 </html>
