@@ -1,4 +1,8 @@
 
+/* =====================================
+   1. GLOBAL RESET
+===================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,13 +17,18 @@ body {
     line-height: 1.7;
 }
 
-nav {
+
+/* =====================================
+   2. NAVBAR
+===================================== */
+
+nav,
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 22px 8%;
     background: #11182b;
-    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -27,15 +36,36 @@ nav h2 {
     color: #60a5fa;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 18px;
 }
 
 nav a:hover {
     color: #60a5fa;
 }
+
+/* Hamburger Button */
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
 
 .hero {
     min-height: 80vh;
@@ -44,6 +74,7 @@ nav a:hover {
     justify-content: center;
     align-items: flex-start;
     padding: 70px 10%;
+
     background: radial-gradient(
         circle at top right,
         #263b72,
@@ -76,6 +107,11 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
+
+/* =====================================
+   4. BUTTONS
+===================================== */
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -89,6 +125,11 @@ nav a:hover {
 .btn:hover {
     background: #2563eb;
 }
+
+
+/* =====================================
+   5. COMMON SECTION STYLING
+===================================== */
 
 section:not(.hero) {
     padding: 65px 10%;
@@ -119,27 +160,10 @@ section h2 {
     text-align: center;
 }
 
-#projects .card {
-    max-width: 600px;
-}
 
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #11182b;
-    color: #cbd5e1;
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 5px;
-        display: inline-block;
-    }
-}
+/* =====================================
+   6. PROJECT SECTION
+===================================== */
 
 .project-grid {
     display: grid;
@@ -156,6 +180,28 @@ footer {
     background: #151e33;
     transition: 0.3s ease;
 }
+
+#projects .card {
+    max-width: 600px;
+}
+
+/* Project Name */
+
+.project-card h3 {
+    color: #38bdf8;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Project Description */
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* GitHub / Project Link */
 
 .project-link {
     display: inline-block;
@@ -176,12 +222,10 @@ footer {
     color: #7dd3fc;
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
+
+/* =====================================
+   7. EDUCATION SECTION
+===================================== */
 
 .education-timeline {
     position: relative;
@@ -196,6 +240,8 @@ footer {
     margin-bottom: 35px;
 }
 
+/* Timeline Dot */
+
 .edu-dot {
     position: absolute;
     left: -44px;
@@ -207,6 +253,8 @@ footer {
     border-radius: 50%;
     box-shadow: 0 0 12px #3b82f6;
 }
+
+/* Education Card */
 
 .education-card {
     background: #151e33;
@@ -221,6 +269,8 @@ footer {
     transform: translateX(6px);
 }
 
+/* Year */
+
 .edu-year {
     display: inline-block;
     color: #93c5fd;
@@ -231,6 +281,8 @@ footer {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+/* Education Text */
 
 .education-card h3 {
     color: white;
@@ -248,22 +300,10 @@ footer {
     font-size: 15px;
 }
 
-@media (max-width: 600px) {
-    .education-timeline {
-        padding-left: 22px;
-    }
 
-    .edu-dot {
-        left: -31px;
-    }
-
-    .education-card {
-        padding: 20px;
-    }
-}
-
-
-/* INTERNSHIP EXPERIENCE */
+/* =====================================
+   8. INTERNSHIP SECTION
+===================================== */
 
 .internship-timeline {
     position: relative;
@@ -278,7 +318,7 @@ footer {
     margin-bottom: 35px;
 }
 
-/* Timeline Dots */
+/* Timeline Dot */
 
 .internship-item::before {
     content: "";
@@ -293,7 +333,7 @@ footer {
     box-shadow: 0 0 12px #3b82f6;
 }
 
-/* Internship Cards */
+/* Internship Card */
 
 .internship-card {
     background: #151e33;
@@ -322,7 +362,7 @@ footer {
     font-weight: bold;
 }
 
-/* Text */
+/* Internship Text */
 
 .internship-card h3 {
     font-size: 22px;
@@ -341,6 +381,8 @@ footer {
     line-height: 1.8;
 }
 
+/* Internship Skills */
+
 .internship-tags {
     display: flex;
     flex-wrap: wrap;
@@ -356,27 +398,10 @@ footer {
     font-size: 12px;
 }
 
-@media (max-width: 600px) {
 
-    .internship-timeline {
-        padding-left: 22px;
-    }
-
-    .internship-item::before {
-        left: -31px;
-    }
-
-    .internship-card {
-        padding: 20px;
-    }
-
-    .internship-card h3 {
-        font-size: 19px;
-    }
-}
-
-
-/* CERTIFICATIONS SECTION */
+/* =====================================
+   9. CERTIFICATIONS SECTION
+===================================== */
 
 .certificate-grid {
     display: grid;
@@ -442,6 +467,8 @@ footer {
     font-size: 14px;
 }
 
+/* View Certificate Button */
+
 .certificate-btn {
     display: inline-block;
     align-self: flex-start;
@@ -458,13 +485,138 @@ footer {
     color: #7dd3fc;
 }
 
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #11182b;
+    color: #cbd5e1;
+}
+
+
+/* =====================================
+   11. TABLET RESPONSIVE
+===================================== */
+
 @media (max-width: 900px) {
+
     .certificate-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
+
+/* =====================================
+   12. MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    nav,
+    .navbar {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        background: #111827;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    /* Projects */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* =====================================
+   13. SMALL MOBILE RESPONSIVE
+===================================== */
+
 @media (max-width: 600px) {
+
+    /* Common Sections */
+
+    section:not(.hero) {
+        padding: 45px 6%;
+    }
+
+    /* Education */
+
+    .education-timeline {
+        padding-left: 22px;
+    }
+
+    .edu-dot {
+        left: -31px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    /* Internship */
+
+    .internship-timeline {
+        padding-left: 22px;
+    }
+
+    .internship-item::before {
+        left: -31px;
+    }
+
+    .internship-card {
+        padding: 20px;
+    }
+
+    .internship-card h3 {
+        font-size: 19px;
+    }
+
+    /* Certificates */
+
     .certificate-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -473,5 +625,5 @@ footer {
     .certificate-card {
         padding: 22px;
     }
-}
 
+}
